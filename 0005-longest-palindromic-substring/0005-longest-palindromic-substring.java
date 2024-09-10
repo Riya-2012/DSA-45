@@ -4,7 +4,7 @@ class Solution {
             return s;
         }
         String LPS = "";
-        for (int i = 0; i < s.length(); i++) {
+        for (int i =1; i < s.length(); i++) {
             int low = i;
             int high = i;
             while (low >= 0&& high < s.length()&&s.charAt(low) == s.charAt(high)) {
