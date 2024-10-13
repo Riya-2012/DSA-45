@@ -6,6 +6,15 @@ class Solution {
         if(n==1){
             return 1;
         }
-        return fib(n-1)+fib(n-2);
+      int FT=0;
+      int ST=1;
+      
+      for(int i  =0;i<n;i++){
+         int TT=FT+ST;
+        FT=ST;
+        ST=TT;
+
+      }
+      return FT;
     }
 }
