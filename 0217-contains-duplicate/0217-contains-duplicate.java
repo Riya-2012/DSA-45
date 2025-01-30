@@ -1,12 +1,13 @@
 class Solution {
 
     public boolean containsDuplicate(int[] nums) {
-        // Sort the array
-        Arrays.sort(nums);
+        // Initialize a HashSet to store unique elements
+        HashSet<Integer> set = new HashSet<>();
         
-        // After sorting, check if any consecutive elements are the same
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] == nums[i - 1]) {
+        // Iterate over the array
+        for (int num : nums) {
+            // If the element already exists in the set, return true
+            if (!set.add(num)) {
                 return true;
             }
         }
@@ -14,5 +15,7 @@ class Solution {
         // If no duplicates found, return false
         return false;
     }
+
+   
     
 }
